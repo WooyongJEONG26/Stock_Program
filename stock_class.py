@@ -6,6 +6,8 @@ class Stock:
         self.__stock_price = 0
         # done 전체 주
         self.__total_stock = 0
+        # done 시가총액
+        self.__market_cap = 0
         # done 총 부채
         self.__total_dept = 0
         # done 시가 총액과 총부채를 더한 값에서 빼야하는 금액
@@ -57,4 +59,13 @@ class Stock:
     # adding total subtraction
     def add_total_subtraction(self, extra_subtraction):
         self.__total_subtraction += extra_subtraction
-    
+
+    # setting market cap
+    def calc_market_cap(self):
+        self.__market_cap = self.__stock_price * self.__total_stock
+
+    # setting Enterprise Value
+    def calc_enterprise_value(self):
+        self.__ev = (self.__market_cap + self.__total_dept) - self.__total_subtraction
+
+    #
