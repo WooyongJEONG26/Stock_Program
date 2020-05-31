@@ -1,13 +1,21 @@
 class Stock:
     def __init__(self):
+        # done 종목명
         self.__name = ''
+        # done 주가
         self.__stock_price = 0
+        # done 전체 주
         self.__total_stock = 0
+        # done 총 부채
         self.__total_dept = 0
+        # done 시가 총액과 총부채를 더한 값에서 빼야하는 금액
         self.__total_subtraction = 0
+        # done Enterprise Value 기업 가치
         self.__ev = 0
+        # done 감각상각비, 세금 등을 더한 값  EBIDTA
         self.__ebidta = 0
-        self.__stock_value = 0
+        # done 기업가치
+        self.__corporate_value = 0
 
     # getting name
     def get_name(self):
@@ -41,3 +49,12 @@ class Stock:
     # getting total dept
     def get_total_dept(self):
         return self.__total_dept
+
+    # adding total dept
+    def add_total_dept(self, extra_dept):
+        self.__total_dept += extra_dept
+
+    # adding total subtraction
+    def add_total_subtraction(self, extra_subtraction):
+        self.__total_subtraction += extra_subtraction
+    
