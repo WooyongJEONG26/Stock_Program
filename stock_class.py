@@ -67,5 +67,3 @@ class Stock:
     # setting Enterprise Value
     def calc_enterprise_value(self):
         self.__ev = (self.__market_cap + self.__total_dept) - self.__total_subtraction
-
-    #
