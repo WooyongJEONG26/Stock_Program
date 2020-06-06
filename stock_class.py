@@ -1,5 +1,7 @@
 class Stock:
     def __init__(self):
+        # id 자동으로 생성 되게 만들어야함
+        self.__id = 0
         # done 종목명
         self.__name = ''
         # done 주가
